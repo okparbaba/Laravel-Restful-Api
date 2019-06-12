@@ -18,7 +18,10 @@ class ProductResource extends JsonResource
         'name'=>$this->name,
         'description'=>$this->detail,
         'price'=>$this->price,
-        'stock'=>$this->stock
+        'stock'=>$this->stock,
+        'href'=>[
+          'reviews'=>route('reviews.index',$this->id)
+        ]
       ];
     }
 }
